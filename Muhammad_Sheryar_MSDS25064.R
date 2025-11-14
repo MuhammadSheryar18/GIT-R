@@ -1,21 +1,22 @@
 library(data.table)
-
+# Importing CSv Files
 sakila_data <- fread("C:/Users/ibrahim laptops/Documents/sakila-csv/film.csv")
 customer_data <- fread("C:/Users/ibrahim laptops/Documents/sakila-csv/customer.csv")
 store_data <- fread("C:/Users/ibrahim laptops/Documents/sakila-csv/store.csv")
 payment_data <- fread("C:/Users/ibrahim laptops/Documents/sakila-csv/payment.csv")
 rental_data <- fread("C:/Users/ibrahim laptops/Documents/sakila-csv/rental.csv")
+# Print CSV 
 head(rental_data)
 head(payment_data)
 head(store_data)
 head(customer_data)
 head(sakila_data)
 
-# # 1. Filter PG-rated films with rental duration > 5 days
-# result1 <- sakila_data[rating == "PG" & rental_duration > 5]
+# 1. Filter PG-rated films with rental duration > 5 days
+result1 <- sakila_data[rating == "PG" & rental_duration > 5]
 
-# # Print the result
-# print(result1)
+# Print the result
+print(result1)
 
 # # 2. Calculate the average rental rate grouped by film rating
 # result2 <- sakila_data[, .(avg_rental_rate = mean(rental_rate)), by = rating]
