@@ -43,12 +43,11 @@ result4 <- customer_store_data[, .(customer_name, store_id)]
 # Print the result
 print(result4)
 
+# 5.Select payment amount, date, and staff who processed the payment
+result5 <- payment_data[, .(amount, payment_date, staff_id)]
 
-# # 5.Select payment amount, date, and staff who processed the payment
-# result5 <- payment_data[, .(amount, payment_date, staff_id)]
-
-# # Print the result
-# print(result5)
+# Print the result
+print(result5)
 
  
 # # 6. Merge the film data with rental data by film_id
