@@ -59,12 +59,12 @@ result6 <- films_rented[is.na(rental_date), .(film_id, title)]
 # Print the result
 print(result6)
 
-# library(ggplot2)
+library(ggplot2)
 
-# # 7. Plot the distribution of rental rates
-# ggplot(sakila_data, aes(x = rental_rate)) +
-#   geom_histogram(binwidth = 0.5, fill = "blue", color = "black", alpha = 0.7) +
-#   labs(title = "Distribution of Rental Rates", x = "Rental Rate", y = "Frequency") +
-#   theme_minimal()
+# 7. Plot the distribution of rental rates
+ggplot(sakila_data, aes(x = rental_rate)) +
+   geom_histogram(binwidth = 0.5, fill = "blue", color = "black", alpha = 0.7) +
+   labs(title = "Distribution of Rental Rates", x = "Rental Rate", y = "Frequency") +
+   theme_minimal()
 
 
