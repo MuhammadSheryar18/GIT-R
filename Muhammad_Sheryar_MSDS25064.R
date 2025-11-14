@@ -24,12 +24,12 @@ result2 <- sakila_data[, .(avg_rental_rate = mean(rental_rate)), by = rating]
 # Print the result
 print(result2)
 
-# # 3. Count the number of films in each language_id
-# result3 <- sakila_data[, .(film_count = .N), by = language_id]
+# 3. Count the number of films in each language_id
+result3 <- sakila_data[, .(film_count = .N), by = language_id]
 
-# # Print the result
-# print(result3)
-# head(sakila_data)
+# Print the result
+print(result3)
+
 
 # # 4. Join customer data with store data by store_id
 # customer_store_data <- merge(customer_data, store_data, by = "store_id")
