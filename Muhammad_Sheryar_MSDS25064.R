@@ -31,17 +31,17 @@ result3 <- sakila_data[, .(film_count = .N), by = language_id]
 print(result3)
 
 
-# # 4. Join customer data with store data by store_id
-# customer_store_data <- merge(customer_data, store_data, by = "store_id")
+# 4. Join customer data with store data by store_id
+customer_store_data <- merge(customer_data, store_data, by = "store_id")
 
-# # Combine first_name and last_name to create customer_name
-# customer_store_data[, customer_name := paste(first_name, last_name)]
+# Combine first_name and last_name to create customer_name
+customer_store_data[, customer_name := paste(first_name, last_name)]
 
-# # Select customer names and store IDs
-# result4 <- customer_store_data[, .(customer_name, store_id)]
+# Select customer names and store IDs
+result4 <- customer_store_data[, .(customer_name, store_id)]
 
-# # Print the result
-# print(result4)
+# Print the result
+print(result4)
 
 
 # # 5.Select payment amount, date, and staff who processed the payment
