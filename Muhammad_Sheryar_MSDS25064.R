@@ -18,11 +18,11 @@ result1 <- sakila_data[rating == "PG" & rental_duration > 5]
 # Print the result
 print(result1)
 
-# # 2. Calculate the average rental rate grouped by film rating
-# result2 <- sakila_data[, .(avg_rental_rate = mean(rental_rate)), by = rating]
+# 2. Calculate the average rental rate grouped by film rating
+result2 <- sakila_data[, .(avg_rental_rate = mean(rental_rate)), by = rating]
 
-# # Print the result
-# print(result2)
+# Print the result
+print(result2)
 
 # # 3. Count the number of films in each language_id
 # result3 <- sakila_data[, .(film_count = .N), by = language_id]
