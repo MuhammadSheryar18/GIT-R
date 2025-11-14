@@ -50,14 +50,14 @@ result5 <- payment_data[, .(amount, payment_date, staff_id)]
 print(result5)
 
  
-# # 6. Merge the film data with rental data by film_id
-# films_rented <- merge(sakila_data, rental_data, by.x = "film_id", by.y = "inventory_id", all.x = TRUE)
+# 6. Merge the film data with rental data by film_id
+films_rented <- merge(sakila_data, rental_data, by.x = "film_id", by.y = "inventory_id", all.x = TRUE)
 
-# # Filter films that have no rental date (not rented)
-# result6 <- films_rented[is.na(rental_date), .(film_id, title)]
+# Filter films that have no rental date (not rented)
+result6 <- films_rented[is.na(rental_date), .(film_id, title)]
 
-# # Print the result
-# print(result6)
+# Print the result
+print(result6)
 
 # library(ggplot2)
 
